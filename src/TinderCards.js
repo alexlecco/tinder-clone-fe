@@ -6,7 +6,7 @@ const defaultPeople = [
   {
     name: "Elizabeth Olsen",
     url:
-      "https://pley.today/__export/1594042769444/sites/mui/img/2020/07/06/elizabeth-olsen.jpg_1819317911.jpg",
+      "https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/cinefilia/vengadores-infinity-war-elizabeth-olsen-entrevista/138012239-1-esl-ES/Elizabeth-Olsen-Ya-era-hora-de-que-los-hombres-tuviesen-que-pensar-si-algo-es-apropiado-o-no.jpg",
   },
   {
     name: "Karen Gillan",
@@ -16,7 +16,7 @@ const defaultPeople = [
   {
     name: "Scarlett Johansson",
     url:
-      "https://i.pinimg.com/originals/62/7f/6f/627f6f3755582d28cb83194896c8fa50.jpg",
+      "https://static3.abc.es/media/estilo/2019/09/05/Scarlett-Johansson-knbC--1200x630@abc.jpg",
   },
 ];
 
