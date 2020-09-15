@@ -1,27 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./TinderCards.css";
 import TinderCard from "react-tinder-card";
-
-const defaultPeople = [
-  {
-    name: "Elizabeth Olsen",
-    url:
-      "https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/cinefilia/vengadores-infinity-war-elizabeth-olsen-entrevista/138012239-1-esl-ES/Elizabeth-Olsen-Ya-era-hora-de-que-los-hombres-tuviesen-que-pensar-si-algo-es-apropiado-o-no.jpg",
-  },
-  {
-    name: "Karen Gillan",
-    url:
-      "https://i.insider.com/5cd10a1c021b4c656431c473?width=1100&format=jpeg&auto=webp",
-  },
-  {
-    name: "Scarlett Johansson",
-    url:
-      "https://static3.abc.es/media/estilo/2019/09/05/Scarlett-Johansson-knbC--1200x630@abc.jpg",
-  },
-];
+import axios from "./axios";
 
 function TinderCards() {
-  const [people] = useState(defaultPeople);
+  const [people, setPeople] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const req = await axios.get("/tinder/cards");
+
+      setPeople(req.data);
+    }
+
+    fetchData();
+  }, []);
 
   const swiped = (direction, nameToDelete) => {
     console.log("removing: " + nameToDelete);
