@@ -21,7 +21,7 @@ const defaultPeople = [
 ];
 
 function TinderCards() {
-  const [people, setPeople] = useState(defaultPeople);
+  const [people] = useState(defaultPeople);
 
   const swiped = (direction, nameToDelete) => {
     console.log("removing: " + nameToDelete);
